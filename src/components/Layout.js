@@ -1,5 +1,4 @@
 "use client";
-
 import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import ParaticAppBar from "./ParaticAppBar";
 import Image from "next/image";
@@ -20,7 +19,7 @@ const ParaticLayout = ({ children }) => {
       </Stack>
       {!isMd && (
         <Stack
-          sx={{ minHeight: "calc(100vh - 250px)" }}
+          sx={{ minHeight: "calc(100vh - 200px)" }}
           paddingY="25px"
           paddingX="10px"
         >
@@ -28,7 +27,7 @@ const ParaticLayout = ({ children }) => {
         </Stack>
       )}
       <Stack
-        height="200px"
+        height="150px"
         justifyContent="center"
         alignItems="center"
         width="100%"

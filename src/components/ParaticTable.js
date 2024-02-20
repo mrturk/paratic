@@ -1,23 +1,28 @@
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import { DownLeftIcon, UpRightIcon } from "../../public/icons/icons";
-import { OutlinedInput, Stack } from "@mui/material";
+import {
+  DownLeftIcon,
+  StarFilledIcon,
+  StarIcon,
+  UpRightIcon,
+} from "../../public/icons/icons";
+import {
+  Avatar,
+  IconButton,
+  Stack,
+  TableRow,
+  TableHead,
+  TableContainer,
+  TableCell,
+  TableBody,
+  Table,
+} from "@mui/material";
 import ParaticInput from "./ParaticInput";
+import { convertUnixTime } from "@/utils/helper";
 
-export default function ParaticTable({ data, setSearchValue }) {
+export default function ParaticTable({ data, setSearchValue, onFavorite }) {
   const checkUpAndDown = (row) => {
     return row.Direction < 0
       ? { color: "#E84257 !important" }
       : { color: "#2EBD85 !important" };
-  };
-
-  const convertUnixTime = (time) => {
-    var s = new Date(time).toLocaleTimeString("tr-TR");
-    return s;
   };
 
   return (
@@ -29,7 +34,7 @@ export default function ParaticTable({ data, setSearchValue }) {
           }}
           sx={{
             color: "white",
-            maxWidth: "400px",
+            maxWidth: { sm: "100%", md: "400px" },
             width: "100%",
           }}
           placeholder="ara"
@@ -44,7 +49,7 @@ export default function ParaticTable({ data, setSearchValue }) {
       >
         <Table
           sx={{
-            minWidth: 450,
+            minWidth: 600,
             backgroundColor: "#1E222D",
             "&& .MuiTableCell-root": {
               borderBottom: "1px solid #2A2E39",
@@ -72,7 +77,7 @@ export default function ParaticTable({ data, setSearchValue }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data?.map((row) => (
+            {data?.map((row, index) => (
               <TableRow
                 sx={{
                   "&& .MuiTableCell-body": {
@@ -83,7 +88,35 @@ export default function ParaticTable({ data, setSearchValue }) {
                 }}
                 key={row._id}
               >
-                <TableCell align="center">{row.Description}</TableCell>
+                <TableCell>
+                  <Stack justifyContent="center" flexDirection="row" gap="25px">
+                    <Stack>
+                      <IconButton
+                        onClick={() => {
+                          onFavorite(row);
+                        }}
+                        sx={{ padding: "0" }}
+                      >
+                        {row.IsFavorite ? <StarFilledIcon /> : <StarIcon />}
+                      </IconButton>
+                    </Stack>
+                    <Stack
+                      flexDirection="row"
+                      justifyContent="center"
+                      alignItems="center"
+                      gap="15px"
+                    >
+                      <Stack> {index + 1}</Stack>
+                      <Stack>
+                        <Avatar
+                          src={`https://img.paratic.com/cdn-img/instrument-images/${row.pageID}.png`}
+                          sx={{ width: "22px", height: "22px" }}
+                        />
+                      </Stack>
+                      <Stack>{row.LegacyCode}</Stack>
+                    </Stack>
+                  </Stack>
+                </TableCell>
                 <TableCell sx={checkUpAndDown(row)} align="center">
                   {row.Bid}
                 </TableCell>
@@ -96,7 +129,7 @@ export default function ParaticTable({ data, setSearchValue }) {
                 <TableCell align="center">{row.High}</TableCell>
                 <TableCell align="center">{row.Low}</TableCell>
                 <TableCell align="center">{row.PreviousClose}</TableCell>
-                <TableCell align="center">
+                <TableCell sx={{ color: "#FBB041 !important" }} align="center">
                   {convertUnixTime(row.DateTime)}
                 </TableCell>
                 <TableCell align="left">

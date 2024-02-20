@@ -1,23 +1,28 @@
 "use client";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MenuIcon from "@mui/icons-material/Menu";
 import MailIcon from "@mui/icons-material/Mail";
 import Image from "next/image";
-import { Button, Container, IconButton, Menu, MenuItem } from "@mui/material";
+import {
+  Button,
+  Container,
+  IconButton,
+  Menu,
+  MenuItem,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  Typography,
+  List,
+  Toolbar,
+  AppBar,
+  CssBaseline,
+  Drawer,
+  Box,
+} from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-const pages = ["Anasayfa", "Canlı Döviz"];
+const pages = ["ANASAYFA", "CANLI DÖVİZ"];
 const drawerWidth = 50;
 
 export default function ParaticDrawerLayout({ children }) {
@@ -99,7 +104,7 @@ export default function ParaticDrawerLayout({ children }) {
                   <MenuItem
                     key={page}
                     onClick={() => {
-                      if (page === "Anasayfa") {
+                      if (page === "ANASAYFA") {
                         router.push("/");
                       } else {
                         router.push("/doviz");
@@ -139,7 +144,7 @@ export default function ParaticDrawerLayout({ children }) {
                 <Button
                   key={page}
                   onClick={() => {
-                    if (page === "Anasayfa") {
+                    if (page === "ANASAYFA") {
                       router.push("/");
                     } else {
                       router.push("/doviz");
