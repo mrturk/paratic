@@ -137,7 +137,9 @@ export default function Doviz() {
         setChangedData(res.data);
       }
     });
-    return () => {};
+    return () => {
+      window.location.reload();
+    };
   }, [socket]);
 
   useEffect(() => {
