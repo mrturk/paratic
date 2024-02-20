@@ -1,95 +1,61 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import ParaticLayout from "@/components/Layout";
+import { Stack, Typography } from "@mui/material";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <ParaticLayout>
+      <Stack padding="50px">
+        <Typography textAlign="center" color="white" variant="body1">
+          Lorem Ipsum "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit..." "There is no one who loves pain
+          itself, who seeks after it and wants to have it, simply because it is
+          pain..." freestar freestar Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. In sit amet ex rhoncus, ornare sem ac, pellentesque
+          velit. Aenean faucibus nec leo nec euismod. Vivamus vel justo ante.
+          Nullam mattis enim et auctor mollis. Phasellus maximus erat in nulla
+          fermentum aliquam. Fusce tristique, nisl vitae gravida dictum, tellus
+          urna mattis odio, non rhoncus nisi orci in nunc. Nulla lobortis
+          suscipit ipsum, at molestie dui tincidunt eget. Aenean sapien ex,
+          porta a consectetur sed, tincidunt eget dolor. Praesent auctor
+          pulvinar tellus, non sagittis mauris iaculis nec. Donec in nunc sed
+          tortor sagittis consequat. Nam arcu ex, auctor vel malesuada sed,
+          mattis a nulla. Sed vitae augue eget ipsum maximus pharetra. Mauris
+          nulla velit, elementum eget ante eget, posuere posuere felis. Proin
+          posuere mauris ante, sit amet mattis quam ornare ut. Aliquam vel
+          mauris imperdiet, vulputate magna vel, cursus velit. Fusce sodales
+          neque eu lacinia posuere. Etiam pretium laoreet dui maximus ornare.
+          Fusce ex eros, ullamcorper ac enim in, ornare fermentum leo. Cras
+          condimentum ipsum sed risus rutrum, in placerat ipsum placerat. Nullam
+          nunc augue, blandit eget vestibulum eu, feugiat facilisis nunc. Fusce
+          vitae elementum justo. Suspendisse tincidunt, erat id ornare posuere,
+          purus turpis ultrices odio, non commodo dui est in odio. Fusce
+          elementum auctor consequat. Donec tristique, odio quis laoreet
+          interdum, lorem odio tincidunt arcu, pulvinar elementum neque nisl nec
+          ante. Integer nec viverra ex. Maecenas dui ipsum, vestibulum vitae
+          erat vitae, tempus ullamcorper leo. Vivamus sit amet lobortis nulla.
+          Suspendisse blandit elementum nisi, eu porta sem varius ut. Morbi in
+          massa sem. In consectetur, urna ac finibus posuere, erat metus
+          imperdiet justo, vitae vulputate dolor mauris in quam. Nulla eu metus
+          sapien. Vivamus scelerisque, est id feugiat varius, diam est consequat
+          libero, eget molestie justo lacus ac dui. Nullam lectus libero,
+          sollicitudin ac vestibulum ut, efficitur at nisl. Mauris tincidunt
+          libero ac lacus convallis blandit. Phasellus vitae massa vitae nisi
+          ultrices euismod. Aliquam malesuada pharetra ante, a iaculis risus
+          consectetur in. Suspendisse finibus aliquam placerat. Maecenas
+          accumsan lobortis nibh sit amet efficitur. Morbi sit amet lacus ut
+          odio volutpat malesuada. Ut eu erat orci. Suspendisse vitae interdum
+          libero. Donec ultrices ante quis aliquet vestibulum. Fusce scelerisque
+          libero sed orci tempor cursus. Donec vitae elit sed erat egestas
+          aliquam quis eget felis. Donec ultricies mauris a laoreet eleifend.
+          Suspendisse potenti. Donec in rutrum lectus, eu eleifend dolor.
+          Curabitur vestibulum ultrices ullamcorper. Phasellus arcu elit,
+          finibus quis sodales in, venenatis a arcu. Donec imperdiet nec arcu a
+          fringilla. Nam elit ligula, vehicula vitae quam quis, euismod maximus
+          nunc. Donec sit amet ligula rutrum, posuere metus ac, placerat elit.
+          Integer imperdiet, ex sed faucibus scelerisque, ex magna ullamcorper
+          mauris, nec molestie diam erat nec ex.
+        </Typography>
+      </Stack>
+    </ParaticLayout>
   );
 }
