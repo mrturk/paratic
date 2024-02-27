@@ -3498,7 +3498,7 @@ socket.emit("joinStream", {
 });
 
 export default function Doviz() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(stabilData);
   const [changedData, setChangedData] = useState({});
   const [searchValue, setSearchValue] = useState();
 
